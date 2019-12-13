@@ -21,10 +21,11 @@ void UWorldPosition::BeginPlay()
 	Super::BeginPlay();
 
 	// FString Log = TEXT("Hello");
-	// FString* PtrLog = &Log;
-	// UE_LOG(LogTemp, Warning, TEXT("%s!"), **PtrLog);
+	FString PtrLog = GetOwner()->GetName();
 	
 
+	UE_LOG(LogTemp, Warning, TEXT("This component is attached to %s!"), *PtrLog);
+	
 }
 
 
