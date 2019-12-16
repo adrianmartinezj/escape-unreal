@@ -21,10 +21,10 @@ void UWorldPosition::BeginPlay()
 	Super::BeginPlay();
 
 	// FString Log = TEXT("Hello");
-	FString PtrLog = GetOwner()->GetName();
-	
-
-	UE_LOG(LogTemp, Warning, TEXT("This component is attached to %s!"), *PtrLog);
+	FString ObjectName = GetOwner()->GetName();
+	FVector ObjectPosition = GetOwner()->GetActorLocation();
+	UE_LOG(LogTemp, Warning, TEXT("%s is at location X: %f Y: %f Z: %f"), *ObjectName, ObjectPosition.X, ObjectPosition.Y, ObjectPosition.Z);
+	// UE_LOG(LogTemp, Warning, TEXT("This component is attached to %s!"), *GetOwner()->GetName());
 	
 }
 
